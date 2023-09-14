@@ -1,0 +1,32 @@
+SSH (Secure Shell) is used to connect to servers. Mac operating sysytems already have an SSH client installed...now we must enable it! Let's go!
+
+Step 1: Open a terminal 
+Open a terminal on your VM (Kali)
+Step 2: ifconfig
+Insert ifconfig 
+This will gives us our ip address. Look for eth0 ip address and copy (otherwise memorize :P )
+
+Step 3: netstat -natp
+Insert netstat -natp
+This will show us what ports are open
+
+Step 4: sudo systemctl status ssh.service
+Insert sudo systemctl status ssh.service
+Take a look and see if its is active and running in your system so you can connect
+Type your password when prompted, and type q to exit and execute the next command
+
+Step 5: sudo systemctl start ssh.service
+Insert systemctl start ssh
+no additional text will appear
+
+Step 6: sudo systemctl status ssh.service
+Insert sudo systemctl status ssh.service once again to doublecheck your port is open
+Type q to exit the text and continue on
+
+Step 7: netstat -natp
+Insert netstat -natp once again
+
+Step 8: Move to your host terminal
+In your host/local terminal insert ssh username@ip address
+Enter your passwrd if prompted
+
